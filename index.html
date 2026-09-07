@@ -838,19 +838,46 @@ h1,h2,h3,h4{
 }
 
 /* ---------- Brands ---------- */
-.brand-row{ display:flex; flex-wrap:wrap; gap: 16px; }
-.brand-slot{
-  flex: 1 1 150px;
-  min-width: 150px;
-  height: 92px;
+.brand-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.brand-slot {
+  height: 160px;
   border: 1px dashed var(--line);
   border-radius: 12px;
-  display:flex; align-items:center; justify-content:center;
-  color: var(--text-dim);
-  font-family: var(--f-mono);
-  font-size: 11.5px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.brand-slot img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .brand-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .brand-row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------- Contact / footer ---------- */
@@ -1125,7 +1152,7 @@ h1,h2,h3,h4{
 </nav>
 
 <div class="float-stack">
-  <a href="#" id="igFloatBtn" class="float-btn insta" data-href="https://instagram.com/YOUR_USERNAME" aria-label="Open Instagram">
+  <a href="#" id="igFloatBtn" class="float-btn insta" data-href="https://www.instagram.com/zxdigital_m/" aria-label="Open Instagram">
     <svg viewBox="0 0 24 24"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.89 1.11 1.15 1.77.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.45 2.53c.64-.25 1.37-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 1.8c-2.67 0-2.99.01-4.04.06-.86.04-1.33.18-1.64.3-.41.16-.71.35-1.02.66-.31.31-.5.61-.66 1.02-.12.31-.26.78-.3 1.64C4.29 8.63 4.28 8.95 4.28 12s.01 3.37.06 4.42c.04.86.18 1.33.3 1.64.16.41.35.71.66 1.02.31.31.61.5 1.02.66.31.12.78.26 1.64.3 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.86-.04 1.33-.18 1.64-.3.41-.16.71-.35 1.02-.66.31-.31.5-.61.66-1.02.12-.31.26-.78.3-1.64.05-1.05.06-1.37.06-4.42s-.01-3.37-.06-4.42c-.04-.86-.18-1.33-.3-1.64a2.75 2.75 0 0 0-.66-1.02 2.75 2.75 0 0 0-1.02-.66c-.31-.12-.78-.26-1.64-.3C14.99 3.81 14.67 3.8 12 3.8zm0 3.05a5.15 5.15 0 1 1 0 10.3 5.15 5.15 0 0 1 0-10.3zm0 1.8a3.35 3.35 0 1 0 0 6.7 3.35 3.35 0 0 0 0-6.7zm5.35-1.99a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
   </a>
   <a href="#contact" class="float-btn phone" aria-label="Call or get in touch">
@@ -1172,16 +1199,16 @@ h1,h2,h3,h4{
     <line x1="10" y1="128" x2="190" y2="128" stroke="currentColor" stroke-width="2"/>
   </svg>
   <div class="wrap hero-inner">
-    <p class="eyebrow">On Air · Digital Marketing Studio</p>
-    <h1>We put your brand <em>on air</em> — and keep the signal strong.</h1>
-    <p class="lede">ZX Digital Marketing is a full-funnel content, ads and video studio for hospitality, education, food & beverage and local businesses that want to look and grow like the big brands.</p>
+    <p class="eyebrow">On Air · Digital Marketing gency</p>
+    <h1>Start with zero scale to - <em>EXTREME.</em></h1>
+    <p class="lede"> We build powerful digital identities through strategy, content, social media and performance marketing—helping businesses get seen, remembered and chosen.</p>
     <div class="hero-actions">
       <a href="#videos" class="btn btn-primary">Watch Our Work <span class="btn-arrow">→</span></a>
       <a href="#services" class="btn btn-ghost">What We Do</a>
     </div>
     <div class="hero-meta">
       <span><b>Full-Funnel</b>Strategy to Production</span>
-      <span><b>Multi-Industry</b>Hospitality to Government</span>
+      <span><b>Multi-Industry</b>Education, Food, Hospitality, Makeover etc..</span>
       <span><b>In-House</b>Shoot, Edit & Publish</span>
     </div>
   </div>
@@ -1232,7 +1259,7 @@ h1,h2,h3,h4{
       <div class="stat"><b>360°</b><span>Social, Ads & Video Under One Roof</span></div>
       <div class="stat"><b>7</b><span>Core Services Offered</span></div>
       <div class="stat"><b>6+</b><span>Industries Actively Served</span></div>
-      <div class="stat"><b>1</b><span>Point of Contact, Full Delivery</span></div>
+      <div class="stat"><b>20+</b><span>Point of Contact, Full Delivery</span></div>
     </div>
   </div>
 </section>
@@ -1251,18 +1278,18 @@ h1,h2,h3,h4{
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">What We Do</p>
-      <h2>Services built to move a brand from invisible to unmissable.</h2>
+      <h2>Not just marketing. We build your digital presence.</h2>
       <p>Everything a growing business needs to show up online, run paid campaigns that convert, and manage the conversations that follow.</p>
     </div>
     <div class="grid grid-3">
-      <div class="card service-card"><span class="tag">Organic</span><span class="num">01</span><h3>Social Media Management</h3><p>Calendars, captions, community replies and platform growth across Instagram, Facebook and beyond.</p></div>
-      <div class="card service-card"><span class="tag">Creative</span><span class="num">02</span><h3>Content Creation</h3><p>Shoots, reels, carousels and photography planned around what your audience actually stops to watch.</p></div>
-      <div class="card service-card"><span class="tag">Paid</span><span class="num">03</span><h3>Meta Ads</h3><p>Instagram & Facebook campaigns built around real business goals — footfall, leads or online orders.</p></div>
-      <div class="card service-card"><span class="tag">Paid</span><span class="num">04</span><h3>Google Ads</h3><p>Search and display campaigns that put you in front of people already looking for what you offer.</p></div>
-      <div class="card service-card"><span class="tag">Post</span><span class="num">05</span><h3>Video Editing</h3><p>Raw footage turned into scroll-stopping reels, ad cuts and long-form video with pace and polish.</p></div>
-      <div class="card service-card"><span class="tag">Automation</span><span class="num">06</span><h3>WhatsApp API</h3><p>Automated catalogues, broadcasts and lead replies so no enquiry sits unanswered.</p></div>
-      <div class="card service-card"><span class="tag">Audio</span><span class="num">07</span><h3>Podcast Production</h3><p>Recording, editing and distribution for brand and founder-led podcasts, start to finish.</p></div>
-      <div class="slot"><div class="plus">+</div><span>Add a Service</span></div>
+      <div class="card service-card"><span class="tag">Organic</span><span class="num">01</span><h3>Social Media Management</h3><p>We turn your social media into a consistent, engaging and professional brand experience. Includes: Instagram • Facebook • Content Planning • Community Management • Posting & Optimization.</p></div>
+      <div class="card service-card"><span class="tag">Creative</span><span class="num">02</span><h3>Content Creation</h3><p> watch and remember your brand. Includes: Reels • Posts • Stories • Creative Campaigns • Copywriting • Content Ideas.</p></div>
+      <div class="card service-card"><span class="tag">Paid</span><span class="num">03</span><h3>Performance marketing</h3><p>Reach the right audience with campaigns built around measurable business goals. Includes: Meta Ads • Facebook Ads • Google Ads • Lead Generation • Brand Awareness • Retargeting • Campaign Optimization.</p></div>
+      <div class="card service-card"><span class="tag">Paid</span><span class="num">04</span><h3> Branding & Graphic Design</h3><p>We create visual identities that make your brand look as good as it performs. Includes: Brand Identity • Logo Design • Typography • Social Media Design • Marketing Creatives.</p></div>
+      <div class="card service-card"><span class="tag">Post</span><span class="num">05</span><h3>Video Production & Editing</h3><p>From raw footage to polished content—we turn ideas into videos people want to watch. Includes: Reels • Promotional Videos • Product Videos • Corporate Videos • Short-form Content • Video Editing.</p></div>
+       <div class="card service-card"><span class="tag">Attachment</span><span class="num">08</span><h3> Influencer Marketing</h3><p>Connect your brand with relevant creators and build campaigns designed around reach, trust and action. Includes: Creator Selection • Campaign Planning • Collaboration Coordination • Content Direction.</p></div>
+       <div class="card service-card"><span class="tag">Audio</span><span class="num">07</span><span class="num">COMMING SOON</span><h3>Podcast Production</h3><p>Recording, editing and distribution for brand and founder-led podcasts, start to finish.</p></div>
+     
     </div>
   </div>
 </section>
@@ -1287,12 +1314,13 @@ h1,h2,h3,h4{
       <div class="mv-card mission">
         <div class="icon">M</div>
         <h3>Our Mission</h3>
-        <p>To give ambitious local and regional brands the same digital firepower as national players — through sharp content, smart ad spends, and systems that keep working after the campaign ends.</p>
+        <p>Our mission is to be the experts in marketing and sales alignment and the masters of the message."
+We focus our clients' requirements and ambitions, establishing strong partnerships built on trust, honesty, and open communication.</p>
       </div>
       <div class="mv-card vision">
         <div class="icon">V</div>
         <h3>Our Vision</h3>
-        <p>To become the most trusted digital growth partner for hospitality, education, food & beverage and everyday local businesses stepping into digital marketing for the first time.</p>
+        <p>Our vision is to become a global leader in digital innovation, empowering brands to achieve sustainable growth through creativity, technology, and strategic excellence. We aim to transform businesses by delivering impactful digital solutions that inspire progress, enhance visibility, and drive long-term success.</p>
       </div>
     </div>
   </div>
@@ -1323,12 +1351,11 @@ h1,h2,h3,h4{
       <div class="chip">Education</div>
       <div class="chip">B2B</div>
       <div class="chip">Food & Beverage</div>
-      <div class="chip">Government</div>
+      <div class="chip">Makeover</div>
       <div class="chip">Local Retail</div>
-      <button class="chip-add">+ Add Industry</button>
-      <button class="chip-add">+ Add Industry</button>
-      <button class="chip-add">+ Add Industry</button>
-      <button class="chip-add">+ Add Industry</button>
+       <div class="chip">RealEstate</div>
+        <div class="chip">Trending Fashion</div>
+     
     </div>
   </div>
 </section>
@@ -1380,12 +1407,18 @@ h1,h2,h3,h4{
       <p>A few of the brands we've built content, ads and campaigns for — add your logos here as case studies go live.</p>
     </div>
     <div class="brand-row">
-      <div class="brand-slot">+ Add Logo</div>
-      <div class="brand-slot">+ Add Logo</div>
-      <div class="brand-slot">+ Add Logo</div>
-      <div class="brand-slot">+ Add Logo</div>
-      <div class="brand-slot">+ Add Logo</div>
-      <div class="brand-slot">+ Add Logo</div>
+      <div class="brand-slot"><img src="bachpan.jpeg" alt="bachpan logo"></div>
+      <div class="brand-slot"><img src="garud classes.jpeg" alt="GARUD CLASSES logo"></div>
+      <div class="brand-slot"><img src="jeevan jyoti.jpeg" alt=""></div>
+      <div class="brand-slot"><img src="niel.jpeg" alt=""></div>
+      <div class="brand-slot"><img src="path defence academy.jpeg" alt=""></div>
+      <div class="brand-slot"><img src="sm public school.jpeg" alt=""></div>
+      <div class="brand-slot"><img src="udgam career.jpeg" alt=""></div>
+      <div class="brand-slot"><img src="yk.jpeg" alt=""></div>
+      <div class="brand-slot"><img src="ask4loans.jpeg" alt=""></div>
+      <div class="brand-slot"><img src="dream furniture.jpeg" alt=""></div>
+      <div class="brand-slot"><img src="jd bakes.jpeg" alt=""></div>
+      <div class="brand-slot"><img src="parashar interiors.jpeg" alt=""></div>
     </div>
   </div>
 </section>
@@ -1409,9 +1442,9 @@ h1,h2,h3,h4{
       <p style="color:var(--text-dim); max-width:420px;">Tell us about your business and we'll put together a content and ads plan built around your industry.</p>
     </div>
     <div>
-      <div class="contact-item"><span>Email</span><a href="mailto:hello@zxdigitalmarketing.com">hello@zxdigitalmarketing.com</a></div>
-      <div class="contact-item"><span>Phone / WhatsApp</span><a href="tel:+910000000000">+91 00000 00000</a></div>
-      <div class="contact-item"><span>Location</span><p>Faridabad, Haryana, India</p></div>
+      <div class="contact-item"><span>Email</span><a href="mailto:Info.zxdigitalm@gmail.com">Info.zxdigitalm@gmail.com</a></div>
+      <div class="contact-item"><span>Phone / WhatsApp</span><a href="tel:+91 8053189392">+91 8053189392</a> <br><a href="tel:+91 89812650455">+91 9812650455</a></div>
+      <div class="contact-item"><span>Location</span><p>Palwal, Haryana, India</p></div>
     </div>
   </div>
 </section>
@@ -1438,7 +1471,7 @@ h1,h2,h3,h4{
     <a href="#school" class="chan-link">CH 04 · Schools</a>
     <a href="#localshops" class="chan-link">CH 05 · Local Shops</a>
     <a href="#makeover" class="chan-link">CH 06 · Makeovers</a>
-    <a href="#more1" class="chan-link">CH 07 · +Add</a>
+    <a href="#RealEstate" class="chan-link">CH 07 · RealEstate</a>
     <a href="#more2" class="chan-link">CH 08 · +Add</a>
     <a href="#more3" class="chan-link">CH 09 · +Add</a>
     <a href="#more4" class="chan-link">CH 10 · +Add</a>
@@ -1560,9 +1593,12 @@ h1,h2,h3,h4{
 </section>
 
 <!-- CH 07-10 EMPTY / FUTURE CHANNELS -->
-<section class="channel-block placeholder" id="more1">
+<section class="channel-block" id="RealEstate">
   <div class="wrap">
-    <div class="channel-head"><span class="channel-num">CH 07</span><h2>New Category</h2></div>
+    <div class="channel-head">
+      <span class="channel-num">CH 07</span>
+      <h2>RealEstate</h2>
+    </div>
     <p class="channel-desc">Reserved for a future video category — rename this channel and add clips when ready.</p>
     <div class="clip-grid">
       <div class="clip-card empty"><div class="clip-thumb"><div class="tri-wrap"><div class="tri"></div></div></div><div class="clip-body"><span class="cat">Empty Slot</span><h4>+ Add video</h4></div></div>
@@ -1615,9 +1651,9 @@ h1,h2,h3,h4{
 <footer class="footer wrap">
   <p class="fine">© 2026 ZX Digital Marketing. All rights reserved.</p>
   <div class="footer-socials">
-    <a href="#">Instagram</a>
+    <a href="https://www.instagram.com/zxdigital_m/">Instagram</a>
     <a href="#">LinkedIn</a>
-    <a href="#">YouTube</a>
+    <a href="https://youtube.com/@zxdigital_edits?si=005h1khU4ojCPziU">YouTube</a>
   </div>
 </footer>
 
@@ -1722,7 +1758,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ---------- Single-page routing (home <-> videos) ----------
-const VIDEO_SECTION_IDS = new Set(['videos','hospitality','cafe','institute','school','localshops','makeover','more1','more2','more3','more4']);
+const VIDEO_SECTION_IDS = new Set(['videos','hospitality','cafe','institute','school','localshops','makeover','RealEstate','more2','more3','more4']);
 
 function zxRoute(){
   const hash = (location.hash || '#home').replace('#','') || 'home';
